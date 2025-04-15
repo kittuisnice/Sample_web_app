@@ -2,7 +2,8 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+# @app.route("/", methods=["GET", "POST"])
+@app.route("/api/httptriggerflask", methods=["GET", "POST"])
 def index():
     name = None
     if request.method == "POST":
@@ -11,4 +12,7 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+# @app.route("/api/httptriggerflask", methods=["GET", "POST"])
+
 
